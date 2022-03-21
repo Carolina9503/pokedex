@@ -5,95 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="container">
-      <header class="container__header">
-        <div class="container__header__container">
-          <figure class="container__header__figure">
-            <img
-              src="/img/logo.png"
-              alt="logo"
-              class="container__header__img"
-            />
-          </figure>
-          <h1 class="container__header__title">POKÉDEX_</h1>
-        </div>
+    <div class="container">
+      <header class="header">
+        <figure class="header__figure">
+          <img src="./img/logo.png" alt="Logo" class="header__img" />
+        </figure>
+        <h1 class="header__title">POKÉDEX_</h1>
       </header>
-      <section class="container__section">
-        <article class="container__section__article">
-          <div class="container__section__article__title">
-            <figure class="container__section__article__figure">
-              <img
-                src="./img/fuego.png"
-                alt="logo dragon"
-                class="container__section__article__img"
-              />
-            </figure>
-            <h2>CHARIZARD</h2>
-          </div>
-          <figure class="container__section__article__pokemon">
+      <main class="main">
+        <article class="article__pokedex">
+          <figure class="article__title">
+            <img src="./img/fuego.png" alt="Fuego" class="article__img" />
+            <figcaption>CHARIZARD</figcaption>
+          </figure>
+          <figure class="article__pokemon">
             <img
               src="./img/charizard.png"
-              alt="Dragon"
-              class="container__section__article__big__pokemon"
+              alt="Charizard"
+              class="article__big__pokemon"
             />
           </figure>
-          <section class="container__section__article__list">
-            <div class="container__section__article__item">
-              <h4>No.</h4>
+          <section class="section__list">
+            <div class="section__list__item">
+              <h4>NO.</h4>
               <span>006</span>
             </div>
-            <div class="container__section__article__item">
+            <div class="section__list__item">
               <h4>LEVEL</h4>
               <span>100</span>
             </div>
-            <div class="container__section__article__item">
+            <div class="section__list__item">
               <h4>TYPE</h4>
               <span>FIRE</span>
             </div>
-            <div class="container__section__article__item">
+            <div class="section__list__item">
               <h4>HABILITY</h4>
               <span>FLAMES</span>
             </div>
-            <div class="container__section__article__item">
-              <h4>Height</h4>
-              <span>7.1m</span>
+            <div class="section__list__item">
+              <h4>HEIGHT</h4>
+              <span>1.7m</span>
             </div>
-            <div class="container__section__article__item">
+            <div class="section__list__item">
               <h4>WEIGHT</h4>
               <span>90.5kg</span>
             </div>
           </section>
         </article>
-      </section>
-      <footer class="container__footer">
-        <section class="container__footer__section">
-          <h3 class="container__footer__title">OTHERS</h3>
-          <div class="container__footer__others">
-            <figure class="container__footer__figure">
-              <img class="container__footer__img" src="/img/poke2.png" alt="" />
-            </figure>
-            <figure class="container__footer__figure">
-              <img
-                class="container__footer__img"
-                src="/img/charizard.png"
-                alt=""
-              />
-            </figure>
-            <figure class="container__footer__figure">
-              <img class="container__footer__img" src="/img/poke3.png" alt="" />
-            </figure>
-            <figure class="container__footer__figure">
-              <img class="container__footer__img" src="/img/poke4.png" alt="" />
-            </figure>
-          </div>
-        </section>
+      </main>
+      <footer class="footer">
+        <h3 class="footer__h3">OTHERS</h3>
+        <div class="footer__others">
+          <figure class="footer__figure">
+            <img src="./img/poke2.png" alt="poke2" class="footer__img" />
+          </figure>
+          <figure class="footer__figure">
+            <img
+              src="./img/charizard.png"
+              alt="charizard"
+              class="footer__img"
+            />
+          </figure>
+          <figure class="footer__figure">
+            <img src="./img/poke3.png" alt="poke3" class="footer__img" />
+          </figure>
+          <figure class="footer__figure">
+            <img src="./img/poke4.png" alt="poke4" class="footer__img" />
+          </figure>
+        </div>
       </footer>
-    </main>
-    <!-- <script>
-      alert(window.screen.availHeight);
-    </script> -->
+    </div>
   </body>
 </html>

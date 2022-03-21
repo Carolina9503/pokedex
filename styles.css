@@ -1,273 +1,285 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
 }
 .container {
   width: 100vw;
   height: 100vh;
-  background: grey;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 1fr 8fr 2fr;
+  grid-template-rows: 1fr 4fr 2fr;
 }
-.container__header {
+.header {
   grid-area: header;
   background-color: #fadd2a;
   display: flex;
-  padding: 7px 0;
+  align-items: center;
+  justify-content: center;
 }
-.container__footer {
-  grid-area: footer;
-  background-color: #fff;
-}
-.container__section {
+.main {
   grid-area: main;
   background-color: #0a78c3;
-  display: flex;
-  justify-content: center;
 }
-.container__header__container {
-  width: 60%;
-  margin: auto;
+.footer {
+  grid-area: footer;
+  background-color: #fff;
+  width: 70%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  margin: 2rem auto;
+  gap: 5px;
+  padding-bottom: 3rem;
 }
-.container__header__figure {
-  width: 25%;
-  display: flex;
-  justify-content: end;
-}
-.container__header__img {
+.header__img {
   width: 100%;
 }
-.container__header__title {
-  font-size: 20px;
+.header__figure {
+  width: 18%;
 }
-.container__section__article {
+.header__title {
+  font-size: 6vw;
+}
+.article__pokedex {
   display: grid;
   grid-template-areas: "title" "imagen" "description";
-  grid-template-rows: 70px 2fr 280px;
-  grid-auto-flow: column;
+  grid-template-rows: 70px 2fr 305px;
   width: 80%;
   margin: 3rem auto;
 }
-.container__section__article__title {
+.article__title {
   grid-area: title;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
   background: #fff;
   border-radius: 9px;
 }
-.container__section__article__figure {
-  width: 20%;
-  display: flex;
-  justify-content: end;
+figcaption {
+  font-size: 1em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
-.container__section__article__img {
-  width: 70%;
-}
-.container__section__article__pokemon {
+.article__pokemon {
   grid-area: imagen;
   width: 100%;
   z-index: 1;
 }
-.container__section__article__big__pokemon {
-  width: 100%;
-}
-.container__section__article__list {
+.section__list {
   grid-area: description;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: #fff;
+  gap: 1rem;
+  background-color: #fff;
   border-radius: 9px;
-  gap: 0.5em;
+  justify-content: center;
   margin-top: -60px;
 }
-.container__section__article__item {
+.section__list__item {
   display: flex;
-  width: 100%;
 }
-.container__section__article__item h4 {
-  width: 50%;
-  padding: 0.5em;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-.container__section__article__item span {
+.section__list__item h4 {
   width: 50%;
   padding: 0.5em;
   font-size: 16px;
 }
-.container__footer__section {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1rem auto;
-  gap: 5px;
+.section__list__item span {
+  width: 50%;
+  padding: 0.5em;
+  font-size: 18px;
 }
-.container__footer__title {
-  text-align: center;
-  text-transform: uppercase;
-  margin: 1rem 0;
-  font-weight: 900;
+.article__img {
+  width: 13%;
+  margin-right: 10px;
 }
-.container__footer__others {
-  width: 85%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 0.7rem;
+
+.article__big__pokemon {
+  width: 100%;
 }
-.container__footer__figure {
+.footer__figure {
   width: 35%;
   background-color: #dc6d1c;
-  padding: 5px;
   border-radius: 9px;
   display: flex;
   justify-content: center;
+  padding: 5px;
   cursor: pointer;
+  /* height: 35%; */
 }
-.container__footer__figure:hover {
+.footer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.footer__others {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer__h3 {
+  text-align: center;
+  margin: 1rem 0;
+}
+.footer__figure:hover {
   background-color: #ca5806;
   transition: background-color 200ms ease-in-out 200ms;
 }
-.container__footer__img {
-  width: 100%;
-  object-fit: contain;
-}
 @media screen and (min-width: 400px) {
-  .container__header__title {
-    font-size: 25px;
-  }
-  .container__section__article__title {
-    font-size: 15px;
-  }
-  .container__section__article__img {
-    width: 60%;
-  }
-  .container__footer__title {
-    font-size: 25px;
+  .article__img {
+    width: 10%;
   }
 }
 @media screen and (min-width: 500px) {
-  .container__section__article__list {
+  .section__list {
     margin-top: -65px;
   }
-  .container__section__article__img {
-    width: 45%;
-  }
 }
-@media screen and (min-width: 600px) {
-  .container__section__article {
-    grid-template-rows: 85px 2fr 280px;
-  }
-  .container__section__article {
-    width: 70%;
+@media screen and (min-width: 564px) {
+  .article__img {
+    width: 9%;
   }
 }
 @media screen and (min-width: 700px) {
-  .container__section__article,
-  .container__footer__section {
+  .footer,
+  .article__pokedex {
     width: 60%;
+  }
+  .article__img {
+    width: 10%;
+  }
+  .article__pokedex {
+    grid-template-rows: 85px 2fr 350px;
+  }
+  .section__list__item h4 {
+    font-size: 20px;
+  }
+  .section__list__item span {
+    font-size: 25px;
+  }
+  .header__title {
+    font-size: 4vw;
+  }
+  .header__figure {
+    width: 10%;
   }
 }
 @media screen and (min-width: 800px) {
-  .container__section__article {
+  .article__pokedex {
     grid-template-areas: "title description " "imagen description";
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 300px;
     gap: 1rem;
   }
-  .container__section__article__list {
+  .section__list {
     margin-top: 0;
   }
-  .container__section__article__big__pokemon {
+  .article__big__pokemon {
     height: 100%;
   }
-  .container__footer__section {
+  .footer,
+  .article__pokedex {
+    width: 80%;
+  }
+  .footer {
     flex-direction: row;
     gap: 1rem;
     align-items: center;
   }
-  .container__footer__others {
-    justify-content: space-around;
+  .footer__others {
     flex-wrap: nowrap;
+    justify-content: space-around;
   }
-  .container__header__container {
-    margin-left: 0;
-    justify-content: start;
-  }
-  .container__header__figure {
+  .footer__figure {
     width: 20%;
   }
-  .container__section__article,
-  .container__footer__section {
-    width: 80%;
+  .footer__h3 {
+    align-items: center;
   }
-  .container__footer__figure {
-    width: 20%;
-  }
-  .container__section__article__list {
+  .section__list {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .container__section__article__item {
+  .section__list__item {
     flex-direction: column;
     width: 45%;
     margin: auto;
     text-align: center;
   }
+  .header {
+    margin-left: 0;
+    justify-content: start;
+  }
 }
 @media screen and (min-width: 900px) {
-  .container__section__article,
-  .container__footer__section {
+  .article__pokedex,
+  .footer {
     width: 70%;
   }
-  .container__header__figure {
+  .header__figure {
     width: 10%;
   }
 }
 @media screen and (min-width: 1000px) {
-  .container__section__article,
-  .container__footer__section {
+  .article__pokedex,
+  .footer {
     width: 60%;
   }
-}
-@media screen and (min-width: 1200px) {
-  .container__section__article,
-  .container__footer__section {
-    width: 50%;
+  .article__pokemon {
+    display: flex;
   }
-}
-@media screen and (min-width: 1600px) {
-  .container__section__article,
-  .container__footer__section {
-    width: 40%;
+  .article__big__pokemon {
+    width: 80%;
+    margin: auto;
+  }
+  .article__figure {
+    width: 10%;
+  }
+  .header__title {
+    font-size: 2vw;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .container__section__article {
+  .article__pokedex {
     width: 50%;
-    grid-template-rows: 1fr 4fr;
-    grid-template-columns: 6fr 500px;
+    grid-template-rows: 90px 350px;
+    grid-template-columns: 5fr 400px;
   }
-  .container__header__figure {
-    width: 6%;
+  .article__img {
+    width: 8%;
   }
-  .container__footer__section {
+  .footer {
     width: 50%;
   }
-  .container__footer__figure {
+  .header__figure {
+    width: 4%;
+  }
+  figcaption {
+    font-size: 1.5em;
+  }
+  .header__title {
+    font-size: 1.2vw;
+  }
+  .footer__figure {
     width: 15%;
+  }
+  .section__list__item h4 {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 20px;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .section__list__item span {
+    font-weight: bold;
+    font-size: 25px;
+    width: 100%;
+    padding: 1rem 0;
   }
 }
